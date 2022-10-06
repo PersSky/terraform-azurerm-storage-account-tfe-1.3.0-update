@@ -158,7 +158,7 @@ variable "nfsv3_enabled" {
 variable "default_network_rule" {
   description = "Specifies the default action of allow or deny when no other network rules match"
   type        = string
-  default     = "Allow"
+  default     = "Deny"
 
   validation {
     condition     = (contains(["deny", "allow"], lower(var.default_network_rule)))
